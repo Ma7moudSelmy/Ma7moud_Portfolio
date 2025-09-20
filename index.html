@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mahmoud Selmi — Flutter Developer</title>
+  <meta name="description" content="Animated one-page portfolio — Mahmoud Selmi" />
+  <link rel="icon" href="images/profile.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- GSAP + plugins from CDN (load before script.js) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="brand">
+        <a href="#hero" class="logo-link" id="logoLink"><img src="images/flutter.svg" alt="Flutter" class="logo-svg"></a>
+        <div class="brand-text">
+          <div class="name">Mahmoud Selmi</div>
+          <div class="role">Flutter Developer</div>
+        </div>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button id="bookBtn" class="btn primary">Book a Meeting</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero card">
+        <div class="hero-left">
+          <h1>Hi — I’m <span id="typed"></span></h1>
+          <p class="lead">A fourth-year Business Information Systems student and a passionate Flutter developer. I build user-friendly mobile apps with Flutter, Dart and REST APIs.</p>
+          <div class="actions">
+            <a href="#projects" class="btn">View Projects</a>
+            <button id="contactBtn" class="btn outline">Contact / Meeting</button>
+          </div>
+        </div>
+        <aside class="hero-right avatar-card card">
+          <div class="avatar-wrap">
+            <img src="images/profile.jpg" alt="Mahmoud" class="avatar" id="avatarImg">
+          </div>
+          <div class="avatar-name">Mahmoud Selmi</div>
+          <div class="avatar-role">Flutter Developer</div>
+          <div class="skills">
+            <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">REST APIs</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="section card">
+        <h2>About</h2>
+        <p>A fourth-year Business Information Systems student and a passionate Flutter developer. Specialized in building user-friendly and efficient mobile applications using Flutter, Dart, and REST APIs. With strong problem-solving skills, teamwork abilities, and a continuous drive to learn, aiming to grow as a professional developer and contribute to impactful projects.</p>
+      </section>
+
+      <section id="projects" class="section card">
+        <h2>Projects</h2>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </section>
+
+      <section id="contact" class="section card contact-section">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-left">
+            <p class="muted">Want to schedule a meeting? Use the buttons to open your email client or chat on WhatsApp. You can also send a message using the form.</p>
+            <div class="contact-actions">
+              <a class="btn primary" href="mailto:ma7moud.m.selmy1@gmail.com?subject=Meeting%20Request">Email Me</a>
+              <a class="btn" href="https://wa.me/201098494030" target="_blank">Chat on WhatsApp</a>
+            </div>
+            <div class="socials">
+              <a href="https://github.com/Ma7moudSelmy" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.youtube.com/@Ma7moudSelmi" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.linkedin.com/in/mahmoud-selmi-862162335" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <form id="contactForm">
+              <input name="user_name" type="text" placeholder="Your name" required class="large-input" />
+              <input name="user_email" type="email" placeholder="Your email" required class="large-input" />
+              <textarea name="message" placeholder="Message" required class="large-textarea"></textarea>
+              <div class="form-actions">
+                <button class="btn primary large-btn" type="submit">Send Message</button>
+                <button id="mailtoBtn" class="btn outline large-btn" type="button">Open Email Client</button>
+              </div>
+              <div id="formMsg" class="muted" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer card">
+      © 2025 • Mahmoud Selmi — <a href="https://github.com/Ma7moudSelmy" target="_blank">GitHub</a>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
